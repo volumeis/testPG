@@ -22,8 +22,8 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="js/common/common.js"></script>
 <!--     <script src="js/common/swipe.js"></script> -->
-<!--     <script src="lib/bootstrap/js/bootstrap.min.js"></script> -->
-<!--     <script src="lib/fakeloader/fakeLoader.min.js"></script> -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/fakeloader/fakeLoader.min.js"></script>
 
 
     <script>
@@ -43,6 +43,9 @@
                 $.getScript("js/pages/login.js");
             });
             logout();
+            
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
         });
 
 //         $(document).one("pagebeforecreate", function () {
