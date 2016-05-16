@@ -14,18 +14,18 @@
 <title>index.html</title>
 <!-- css -->
 <link rel="stylesheet"	href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
-<!--     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" /> -->
-<!--     <link rel="stylesheet" href="lib/fakeloader/fakeLoader.css"> -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/fakeloader/fakeLoader.css">
 <!-- 폰트 추가해 줌 05.12-->
-<!-- <link rel="stylesheet" href="css/common.css"> -->
-<!-- <link rel="stylesheet" href="css/modal.css"> -->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/modal.css">
 
 <!-- js -->
 <script src="lib/jquery/jquery.min.js"></script>
-<!-- <script src="js/common/common.js"></script> -->
-<!--     <script src="js/common/swipe.js"></script> -->
-<!-- <script src="lib/bootstrap/js/bootstrap.min.js"></script> -->
-<!-- <script src="lib/fakeloader/fakeLoader.min.js"></script> -->
+<script src="js/common/common.js"></script>
+<script src="js/common/swipe.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/fakeloader/fakeLoader.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <script>
@@ -34,8 +34,7 @@
          *
          *  유민호
          *  04.24.16
-         */
-//                $(document).on("pagebeforeload", function () {    
+         */    
         $(document).on("mobileinit", function () {
 
             $.support.cors = true;
@@ -48,27 +47,27 @@
                 });
                 $.getScript("js/pages/login.js");
             });
-//             logout();
+            logout();
             
         });
 
-//         $(document).one("pagebeforecreate", function () {
-//             $("#fakeloader").fakeLoader({
-//                 timeToHide: 2000,
-//                 zIndex: "9999",
-//                 bgColor: "#FFFFFF",
-//                 imagePath: "image/brandImg/_logo2.gif"
-//             });
-//             $(".fl").css({
-//                 "top": $(window).height() / 2 - $(window).width() / 2,
-//                 "width": $(window).width(),
-//                 "height": "auto"
-//             });
-//             $(".fl img").css({
-//                 "width": "100%",
-//                 "height": "100%"
-//             });
-//         });
+        $(document).one("pagebeforecreate", function () {
+            $("#fakeloader").fakeLoader({
+                timeToHide: 2000,
+                zIndex: "9999",
+                bgColor: "#FFFFFF",
+                imagePath: "image/brandImg/_logo2.gif"
+            });
+            $(".fl").css({
+                "top": $(window).height() / 2 - $(window).width() / 2,
+                "width": $(window).width(),
+                "height": "auto"
+            });
+            $(".fl img").css({
+                "width": "100%",
+                "height": "100%"
+            });
+        });
     </script>
 
 <script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
@@ -76,15 +75,8 @@
 </head>
 
 <body>
-	<div class="app">
-		<h1>PhoneGap</h1>
-		<div id="deviceready" class="blink">
-			<p class="event listening">Connecting to Device</p>
-			<p class="event received">Device is Ready</p>
-		</div>
-	</div>
 	<!--     loaderInit 04.26.16       -->
-	<!--     <div id="fakeloader"></div> -->
+	    <div id="fakeloader"></div>
 	<div data-role="page" class="pages" id="login-page" data-dom-cache=true>sdfsdf</div>
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
