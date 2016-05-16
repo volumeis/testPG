@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html, body {
+  height: 100%;
+  font-family: 'Noto Sans KR';
+}
+.store-content{
+    margin: 0px 13px;
+    border: 1px red solid ;
+}
+
+.store-info {
+    position: relative;
+    margin: 13px;
+    border: 1px blue solid;
+    height: 80px;
+    text-align:center
+} 
+
+store-info
+.store-info .col-xs-4,
+.store-info .col-xs-8{
+    padding: 0px;
+    height: 100%;
+}
+.store-info .rate-score{
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 40
+    
+}
+/*
+.store-info .rate-floater{
+    height: 10px;
+    float:left;
+}
+*/
+
+.store-info .rateit{
+    margin-top: 5px;
+}
+/*.store-info .store-img{
+    width: 150px;
+    height: 150px;
+}
+.store-info .store-img img{
+    width: inherit;
+    height: inherit;
+}*/
+.store-info .floater{
+    height: 40px;
+    float:left;
+}
+.store-info .graph-text{
+/*    max-width: inherit;*/
+/*    position: relative;*/
+    clear: left;
+    font-size: 1.1em;
+    color: cornflowerblue;
+    
+}
+
+
+
+#toast {
+	position: fixed;
+	top: 80%;
+	left: 50%;
+	width: 200px;
+	background-color: black;
+	color:white;
+	margin-left: -100px;
+	border: 1px solid #666;
+	padding: 10px 0 ;
+	text-align:center;
+	opacity: .9;
+
+	
+	/* opacity time */
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-ms-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;
+	
+	/* round border */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+}
+

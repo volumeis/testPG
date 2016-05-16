@@ -1,0 +1,19 @@
+/* #noPopup .ui-header ui-bar-a{
+	 height: 40px;
+	 margin-left: 124px;
+}
+
+#popupDialog .ui-header ui-bar-a{
+	 height: 40px;
+	 margin-left: 124px;
+}
+ */
+
+div.ui-header.ui-bar-a{
+	height: 0px;
+	
+}
+
+div.ui-content{
+	margin-bottom: -1.0em;
+}

@@ -1,0 +1,37 @@
+#customerinfo-page h1 {
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+#cdiv .ui-grid-a {
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    height: 130px;
+}
+
+#cdiv .ui-block-a {
+    width: 35%;
+    margin: 10px;
+    height: 110px;
+    padding-top: 0px;
+}
+
+.ui-block-b {
+    padding-left: 20px;
+    width: 170px;
+}
+
+.ctotal {
+    padding: 12px 0px;
+    font-size: 14px;
+}
+
+.ui-corner-all{
+	width:100%
+}
+
+#purchaseDatepicker{
+	margin-top :10px;
+}

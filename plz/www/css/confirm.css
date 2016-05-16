@@ -1,0 +1,37 @@
+#confirm-page .main-content{
+	background-color: white !important;
+	padding-right:5px;
+	padding-left:5px;
+}
+
+#confirm-page .container{
+	padding :0px;	
+}
+#customerName{
+	text-align: center;
+	font-size: 1.9em;
+}
+
+#price{
+	text-align: right;
+	font-size: 1.5em;
+	padding:10px 20px 10px 10px;
+		
+}
+
+#ono{
+	border: 2px solid lightgray; 
+	border-top: 1px solid lightgray;
+	text-align: right;
+	font-size: 1.3em;
+	padding: 10px 20px;
+}
+
+#confirm-page #orderlist{
+	text-align: center;
+	border: 2px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	font-size:1.7em;
+	color: red;
+	padding: 5px 0px;
+}

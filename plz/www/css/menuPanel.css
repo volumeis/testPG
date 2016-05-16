@@ -1,0 +1,19 @@
+#menuPanel{
+    font-size : 1.3em;
+    background : rgba(0, 0, 0, 0.8);
+}
+.panel-backgrosund{
+    position: relative;
+    height: 100%;
+}
+.menupanel-logout{
+    width:100%;
+    position: absolute;
+    bottom: 0px;
+    
+    height: 60px;
+    background-color:#9ec9f4;
+    
+    font-size : 1.3em;
+    color: floralwhite;
+}

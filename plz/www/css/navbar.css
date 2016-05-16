@@ -1,0 +1,52 @@
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle : 토글버튼강제*/
+  }
+}
+ 
+/*최소 폭 992 이상일 때 : 큰화면 */
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+}
+ 
+/* navigation */
+.navbar{
+    padding: 0px;
+    background-color: cornflowerblue;
+    position: fixed;
+    margin-bottom: 10px;
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+@media (min-width: 0px)
+.btn .navbar-btn .navbar-right .navbar-icon{
+    float: right;
+    
+}
+
+.navbar-icon {
+    color: white;
+    padding: 6px;
+    border: 0px;
+    margin: 4px 6px;
+}
+.navbar-icon:hover{
+    background-color: transparent;
+    color:chartreuse;
+    transform: scale(1.3);
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}

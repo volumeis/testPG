@@ -1,0 +1,143 @@
+/*
+#store-searched-table table {
+    width: 100%;
+    margin: 15px 0
+}
+
+#store-searched-table th {
+    background-color: #828282;
+    background: -o-linear-gradient(90deg, #828282, #b7b7b7);
+    background: -moz-linear-gradient( center top, #828282 5%, #b7b7b7 100%);
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #828282), color-stop(1, #b7b7b7));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#828282', endColorstr='#b7b7b7');
+    color: #FFFFFF
+}
+
+#store-searched-table,
+#store-searched-table th,
+#store-searched-table td {
+    font-size: 0.95em;
+    text-align: center;
+    padding: 4px;
+    border-bottom: 1px solid #efefef;
+    border-collapse: collapse
+}
+
+#store-searched-table tr:nth-child(odd) {
+    background-color: #d5d5d5;
+    background: -o-linear-gradient(90deg, #d5d5d5, #f6f6f6);
+    background: -moz-linear-gradient( center top, #d5d5d5 5%, #f6f6f6 100%);
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d5d5d5), color-stop(1, #f6f6f6));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d5d5d5', endColorstr='#f6f6f6');
+}
+
+#store-searched-table tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+*/
+
+.wrap {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 288px;
+    height: 132px;
+    margin-left: -144px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    line-height: 1.5;
+}
+
+.wrap * {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap .info {
+    width: 286px;
+    height: 120px;
+    border-radius: 5px;
+    border-bottom: 2px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wrap .info:nth-child(1) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+
+.info .title {
+    padding: 5px 0 0 10px;
+    height: 30px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #888;
+    width: 17px;
+    height: 17px;
+    background: url('http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+
+.info .close:hover {
+    cursor: pointer;
+}
+
+.info .body {
+    position: relative;
+    overflow: hidden;
+}
+
+.info .desc {
+    position: relative;
+    margin: 13px 0 0 90px;
+    height: 75px;
+}
+
+.desc .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.desc .jibun {
+    font-size: 11px;
+    color: #888;
+    margin-top: -2px;
+}
+
+.info .img {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 73px;
+    height: 71px;
+    border: 1px solid #ddd;
+    color: #888;
+    overflow: hidden;
+}
+
+.info:after {
+    content: '';
+    position: absolute;
+    margin-left: -12px;
+    left: 50%;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+    background: url('http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
+.info .link {
+    color: #5085BB;
+}
