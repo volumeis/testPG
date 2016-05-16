@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Join</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/fakeloader/fakeLoader.css">
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- js -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/fakeloader/fakeLoader.min.js"></script>
+    <script src="../lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page" id="join-page">
+        <div data-role="main" class="ui-content">
+        <link rel="stylesheet" href="css/join.css">
+            <div class="center-block">
+                <div class="page-header">
+                    <h1>회원가입</h1>
+                </div>
+
+                <label class="control-label" for="telIpt">Phone. ex)01012345678
+                </label>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input data-role="none" type="tel" class="form-control" id="telIpt" placeholder="휴대폰 번호" value="010" maxlength="11">
+                        <span class="input-group-btn">
+							<button data-role="none" id="callCodeBtn" class="btn btn-success"
+								type="button" disabled>인증요청</button>
+						</span>
+
+                    </div>
+                    <div class="collapse" id="collapseCode">
+                        <div class="well well-sm">
+                            <div class="input-group">
+                                <input data-role="none" type="tel" class="form-control" id="codeIpt" placeholder="인증번호" maxlength="4">
+                                <span class="input-group-btn">
+									<button data-role="none" class="btn btn-default"
+										id="checkCodeBtn" type="button">확인</button>
+								</span>
+                            </div>
+
+                            <span>제한시간 : </span><span id="codeTimer"></span>초
+                        </div>
+                    </div>
+                    <label class="control-label" for="passwordIpt">Password</label>
+                    <div class="input-group">
+                        <input data-role="none" type="password" class="form-control" id="passwordIpt" placeholder="비밀번호" maxlength="20"> 
+                        <span class="input-group-addon" id="passwordLbl">4~20자</span>
+                    </div>
+                    <label class="control-label" for="passwordChkIpt">Password check</label>
+                    <div class="input-group">
+                        <input data-role="none" type="password" class="form-control" id="passwordChkIpt" placeholder="비밀번호 확인" maxlength="20"> 
+                        <span class="input-group-addon" id="passwordChkLbl">4~20자</span>
+                    </div>
+                    <div class="input-group"></div>
+
+                    <label class="control-label" for="joinBtn">가입요청</label>
+                    <button data-role="none" href="#login-page" type="button" id="joinBtn" class="btn btn-default btn-block">회원가입</button>
+                </div>
+                <!-- 코드에러 modal dialog            -->
+                <div class="modal fade" id="codeError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-role="none">
+                    <div class="modal-dialog modal-sm" data-role="none">
+                        <div class="modal-content" data-role="none">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">시간초과</h4>
+                            </div>
+                            <div class="modal-body">다시 요청해 주세요.</div>
+                            <div class="modal-footer" data-role="none">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" data-role="none">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/pages/join.js"></script>
+        </div>
+</body>
+
+</html>

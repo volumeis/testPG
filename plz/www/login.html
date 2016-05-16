@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Login</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/fakeloader/fakeLoader.css">
+    <link rel="stylesheet" href="../lib/jquery-ui/themes/pepper-grinder/jquery-ui.min.css">
+
+    <!-- js -->
+    <script src="../js/common.js"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/fakeloader/fakeLoader.js"></script>
+    <script src="../lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
+    
+</head>
+
+<body>
+    <div data-role="page" class="pages" id="login-page" data-dom-cache=true>
+        <div data-role="main" class="ui-content">
+        
+            <div style="margin-top: 60px">
+                <div>
+                    <img src="image/brandImg/mainLogo.gif" class="center-block" style="width: 70%">
+                </div>
+            </div>
+            <div>
+                <div class="center-block" style="width: 70%;">
+                    <input type="tel" data-clear-btn="false" id="customerTel" name="customerTel" value="" placeholder="휴대폰">
+                </div>
+                <div class="center-block" style="width: 70%; margin-top: 10px">
+                    <input type="password" data-clear-btn="false" id="password" name="password" value="" placeholder="비밀번호">
+                </div>
+            </div>
+       <!--      <div class="center-block" style="width: 70%; margin-top: 20px">
+                <button data-role="none" type="button" id="login" class="btn btn-default btn-block">로그인</button>
+            </div> -->
+    <!-- popup -->
+            	<a href="#" id="login" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-default btn-block" style="width:70%; margin-top:15px; margin-left:15%">로그인</a>
+				<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width: 400px;">
+					<div role="main" class="ui-content">
+						<h3 class="ui-title">ID 를 입력하지 않으셨습니다.</h3>         
+							<a id="customerTel" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">확인</a>     
+					</div>
+				</div>
+				
+				<div data-role="popup" id="noPopup" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width: 400px;">
+					<div role="main" class="ui-content">
+						<h3 class="ui-title">패스워드를 입력하지 않으셨습니다.</h3>
+							<a id="password" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">확인</a>         
+					</div>
+				</div>
+	<!-- popup -->
+            <div style="margin: 65px 0px 0px 0px; text-align: center">
+                <a href="./join.html" data-role="none" data-transition="slide" id="new">계정 만들기</a>
+            </div>
+            
+			<div data-role="popup" id="retry" data-overlay-theme="b"
+				data-theme="b" data-dismissible="false" style="max-width: 400px;">
+				<div role="main" class="ui-content">
+					<h3 class="ui-title">아이디 , 패스워드를 확인하시고 다시 로그인...</h3>
+					<a id="retry" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">확인</a>         
+				</div>
+			</div>
+			
+			<script src="js/pages/login.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
