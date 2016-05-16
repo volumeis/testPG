@@ -33,17 +33,17 @@
          *  유민호
          *  04.24.16
          */
-        //        $(document).on("pagebeforeload", function () {    
-//         $(document).on("mobileinit", function () {
-//             $.mobile.autoInitializePage = false;
-//             $(function () {
-//                 $("#login-page").load("login.html [data-role=main]", function (data) {
-//                     $.mobile.initializePage();
-//                 });
-//                 $.getScript("js/pages/login.js");
-//             });
-//             logout();
-//         });
+               $(document).on("pagebeforeload", function () {    
+        $(document).on("mobileinit", function () {
+            $.mobile.autoInitializePage = false;
+            $(function () {
+                $("#login-page").load("login.html [data-role=main]", function (data) {
+                    $.mobile.initializePage();
+                });
+                $.getScript("js/pages/login.js");
+            });
+            logout();
+        });
 
 //         $(document).one("pagebeforecreate", function () {
 //             $("#fakeloader").fakeLoader({
