@@ -13,22 +13,21 @@
 
 <title>index.html</title>
 <!-- css -->
-<link rel="stylesheet"
-	href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
+<!-- <link rel="stylesheet"	href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" /> -->
 <!--     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" /> -->
 <!--     <link rel="stylesheet" href="lib/fakeloader/fakeLoader.css"> -->
 <!-- 폰트 추가해 줌 05.12-->
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/modal.css">
+<!-- <link rel="stylesheet" href="css/common.css"> -->
+<!-- <link rel="stylesheet" href="css/modal.css"> -->
 
 <!-- js -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="js/common/common.js"></script>
+<!-- <script src="lib/jquery/jquery.min.js"></script> -->
+<!-- <script src="js/common/common.js"></script> -->
 <!--     <script src="js/common/swipe.js"></script> -->
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/fakeloader/fakeLoader.min.js"></script>
+<!-- <script src="lib/bootstrap/js/bootstrap.min.js"></script> -->
+<!-- <script src="lib/fakeloader/fakeLoader.min.js"></script> -->
 
-
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 <script>
         /** Redirect on Start-UP
          *  상태에 따른 페이지 전환 구현부분
@@ -36,20 +35,20 @@
          *  유민호
          *  04.24.16
          */
-               $(document).on("pagebeforeload", function () {    
-        $(document).on("mobileinit", function () {
-            $.mobile.autoInitializePage = false;
-            $(function () {
-                $("#login-page").load("login.html [data-role=main]", function (data) {
-                    $.mobile.initializePage();
-                });
-                $.getScript("js/pages/login.js");
-            });
-            logout();
+//                $(document).on("pagebeforeload", function () {    
+//         $(document).on("mobileinit", function () {
+//             $.mobile.autoInitializePage = false;
+//             $(function () {
+//                 $("#login-page").load("login.html [data-role=main]", function (data) {
+//                     $.mobile.initializePage();
+//                 });
+//                 $.getScript("js/pages/login.js");
+//             });
+//             logout();
             
-            $.support.cors = true;
-            $.mobile.allowCrossDomainPages = true;
-        });
+//             $.support.cors = true;
+//             $.mobile.allowCrossDomainPages = true;
+//         });
 
 //         $(document).one("pagebeforecreate", function () {
 //             $("#fakeloader").fakeLoader({
@@ -70,7 +69,7 @@
 //         });
     </script>
 
-<script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+<!-- <script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script> -->
 
 </head>
 
@@ -91,6 +90,6 @@
         app.initialize();
     </script>
 
-</body>
 
+</body>
 </html>
