@@ -3,6 +3,8 @@ $(function () {
     //==> DOM Object GET 3가지 방법 ==> 1. $(tagName) : 2.(#id) : 3.$(.className)
     //$("#customerTel").focus();
     //==>"Login"  Event 연결
+	alert('zzzzz');
+	/*
     $("#login").on("click", function () {
     	console.log("로그인 과정");
         var id = $("#customerTel").val().trim();
@@ -24,10 +26,11 @@ $(function () {
             return;
         }
 
-/*
+
         $.ajax({
             url: COMMONWEBSERVER + "/customer/jsonLogin",
             method: "POST",
+            crossDomain: true,
             dataType: "json",
             headers: {
                 "Accept": "application/json",
@@ -53,6 +56,7 @@ $(function () {
             	alert(status);
             }
         });
-        */
+        
     });
+    */
 });
