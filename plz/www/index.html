@@ -56,8 +56,7 @@ $(document).on("mobileinit", function () {
          $.ajax({
              url: COMMONWEBSERVER + "/customer/jsonLogin",
              method: "POST",
-             crossDomain: true,
-             dataType: "json",
+             dataType: "jsonp",
              headers: {
                  "Accept": "application/json",
                  "Content-Type": "application/json"
