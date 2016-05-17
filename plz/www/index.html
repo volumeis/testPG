@@ -2,80 +2,60 @@
 <html>
 
 <head>
-<meta charset="utf-8" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="msapplication-tap-highlight" content="no" />
-<meta name="viewport"
-	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-<meta http-equiv="Content-Security-Policy"
-	content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
-<title>index.html</title>
-<!-- css -->
-<link rel="stylesheet"	href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
+    <title>index.html</title>
+    <!-- css -->
+    <link rel="stylesheet" href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/fakeloader/fakeLoader.css">
-<!-- 폰트 추가해 줌 05.12-->
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/modal.css">
+    <!-- 폰트 추가해 줌 05.12-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/modal.css">
 
-<!-- js -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="js/common/common.js"></script>
-<script src="js/common/swipe.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/fakeloader/fakeLoader.min.js"></script>
+    <!-- js -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/common/common.js"></script>
+    <script src="js/common/swipe.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/fakeloader/fakeLoader.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script>
         /** Redirect on Start-UP
          *  상태에 따른 페이지 전환 구현부분
          *
          *  유민호
          *  04.24.16
-         */    
-$(document).on("mobileinit", function () {
+         */
+        $(document).on("mobileinit", function () {
 
-     $.support.cors = true;
-     $.mobile.allowCrossDomainPages = true;
-     
- 	$.mobile.autoInitializePage = false;
-     $(function () {
-         $("#login-page").load("login.html [data-role=main]", function (data) {
-             $.mobile.initializePage();
-         });
-         /*
-         $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
-         	alert( data ); // Data returned
-         	alert( textStatus ); // Success
-         	alert( jqxhr.status ); // 200
-         	alert( "Load was performed." );
-         });
-         $.getScript("js/pages/login.js");*/         
-         $.ajax({
-             url: COMMONWEBSERVER + "/customer/jsonLogin",
-             method: "POST",
-             dataType: "jsonp",
-             headers: {
-                 "Accept": "application/json",
-                 "Content-Type": "application/json"
-             },
-             data: JSON.stringify({
-                 customerTel: id,
-                 password: pw
-             }),
-             success: function (JSONData, status) {
-            	 alert('success');
-             },
-             error: function(JSONData, status){
-             	alert(status);
-             }
-         });
-         
-     });
-     logout();
- });
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+
+            $.mobile.autoInitializePage = false;
+            $(function () {
+                $("#login-page").load("login.html [data-role=main]", function (data) {
+                    $.mobile.initializePage();
+                });
+                /*
+                $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
+                	alert( data ); // Data returned
+                	alert( textStatus ); // Success
+                	alert( jqxhr.status ); // 200
+                	alert( "Load was performed." );
+                });
+                $.getScript("js/pages/login.js");*/
+
+
+            });
+            logout();
+        });
 
         $(document).one("pagebeforecreate", function () {
             $("#fakeloader").fakeLoader({
@@ -94,23 +74,43 @@ $(document).on("mobileinit", function () {
                 "height": "100%"
             });
         });
+        $.ajax({
+            url: COMMONWEBSERVER + "/customer/jsonLogin",
+            method: "POST",
+            dataType: "jsonp",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                customerTel: '123',
+                password: '123123'
+            }),
+            success: function (JSONData, status) {
+                   alert(status);
+            },
+            error: function (JSONData, status) {
+                alert(status);
+            }
+        });
         alert('vqewvqwe');
     </script>
 
-<script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 
 <body>
-	<!--     loaderInit 04.26.16       -->
-	    <div id="fakeloader"></div>
-	<div data-role="page" class="pages" id="login-page" data-dom-cache=true>sdfsdf</div>
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript">
+    <!--     loaderInit 04.26.16       -->
+    <div id="fakeloader"></div>
+    <div data-role="page" class="pages" id="login-page" data-dom-cache=true>sdfsdf</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
         app.initialize();
     </script>
 
 
 </body>
+
 </html>
