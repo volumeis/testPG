@@ -45,7 +45,12 @@
                 $("#login-page").load("login.html [data-role=main]", function (data) {
                     $.mobile.initializePage();
                 });
-                $.getScript("js/pages/login.js");
+                $.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
+                	  console.log( data ); // Data returned
+                	  console.log( textStatus ); // Success
+                	  console.log( jqxhr.status ); // 200
+                	  console.log( "Load was performed." );
+                	});
             });
             logout();
             
@@ -68,7 +73,7 @@
                 "height": "100%"
             });
         });
-        alert('123');
+        alert('1223');
     </script>
 
 <script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
