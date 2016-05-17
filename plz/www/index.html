@@ -45,13 +45,35 @@ $(document).on("mobileinit", function () {
          $("#login-page").load("login.html [data-role=main]", function (data) {
              $.mobile.initializePage();
          });
+         /*
          $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
          	alert( data ); // Data returned
          	alert( textStatus ); // Success
          	alert( jqxhr.status ); // 200
          	alert( "Load was performed." );
          });
-         $.getScript("js/pages/login.js");
+         $.getScript("js/pages/login.js");*/         
+         $.ajax({
+             url: COMMONWEBSERVER + "/customer/jsonLogin",
+             method: "POST",
+             crossDomain: true,
+             dataType: "json",
+             headers: {
+                 "Accept": "application/json",
+                 "Content-Type": "application/json"
+             },
+             data: JSON.stringify({
+                 customerTel: id,
+                 password: pw
+             }),
+             success: function (JSONData, status) {
+            	 alert('success');
+             },
+             error: function(JSONData, status){
+             	alert(status);
+             }
+         });
+         
      });
      logout();
  });
