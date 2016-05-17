@@ -35,25 +35,26 @@
          *  유민호
          *  04.24.16
          */    
-        $(document).on("mobileinit", function () {
+$(document).on("mobileinit", function () {
 
-            $.support.cors = true;
-            $.mobile.allowCrossDomainPages = true;
-            
-        	$.mobile.autoInitializePage = false;
-            $(function () {
-                $("#login-page").load("login.html [data-role=main]", function (data) {
-                    $.mobile.initializePage();
-                });
-                $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
-                	alert( data ); // Data returned
-                	alert( textStatus ); // Success
-                	alert( jqxhr.status ); // 200
-                	alert( "Load was performed." );
-                	});
-                });
-            logout();
-        });
+     $.support.cors = true;
+     $.mobile.allowCrossDomainPages = true;
+     
+ 	$.mobile.autoInitializePage = false;
+     $(function () {
+         $("#login-page").load("login.html [data-role=main]", function (data) {
+             $.mobile.initializePage();
+         });
+         $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
+         	alert( data ); // Data returned
+         	alert( textStatus ); // Success
+         	alert( jqxhr.status ); // 200
+         	alert( "Load was performed." );
+         });
+         $.getScript("js/pages/login.js");
+     });
+     logout();
+ });
 
         $(document).one("pagebeforecreate", function () {
             $("#fakeloader").fakeLoader({
