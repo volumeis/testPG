@@ -50,17 +50,9 @@
                 	alert( textStatus ); // Success
                 	alert( jqxhr.status ); // 200
                 	alert( "Load was performed." );
-                	})
-                	.fail(function( jqxhr, settings, exception){
-                		alert( jqxhr ); // Data returned
-                    	alert( settings ); // Success
-                    	alert( jqxhr.exception ); // 200
-                    	alert('qweqwe');
                 	});
-                }
-            });
+                });
             logout();
-            
         });
 
         $(document).one("pagebeforecreate", function () {
