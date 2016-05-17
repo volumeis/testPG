@@ -24,7 +24,7 @@ $(function () {
             return;
         }
 
-
+/*
         $.ajax({
             url: COMMONWEBSERVER + "/customer/jsonLogin",
             method: "POST",
@@ -53,5 +53,6 @@ $(function () {
             	alert(status);
             }
         });
+        */
     });
 });
