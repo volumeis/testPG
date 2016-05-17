@@ -47,10 +47,17 @@
                 });
                 $.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
                 	alert( data ); // Data returned
-                	  alert( textStatus ); // Success
-                	  alert( jqxhr.status ); // 200
-                	  alert( "Load was performed." );
+                	alert( textStatus ); // Success
+                	alert( jqxhr.status ); // 200
+                	alert( "Load was performed." );
+                	})
+                	.fail(function( jqxhr, settings, exception){
+                		alert( jqxhr ); // Data returned
+                    	alert( settings ); // Success
+                    	alert( jqxhr.exception ); // 200
+                    	alert('qweqwe');
                 	});
+                }
             });
             logout();
             
@@ -73,7 +80,7 @@
                 "height": "100%"
             });
         });
-        alert('1223');
+        alert('vqewvqwe');
     </script>
 
 <script src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
