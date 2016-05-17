@@ -46,10 +46,10 @@
                     $.mobile.initializePage();
                 });
                 $.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
-                	  console.log( data ); // Data returned
-                	  console.log( textStatus ); // Success
-                	  console.log( jqxhr.status ); // 200
-                	  console.log( "Load was performed." );
+                	alert( data ); // Data returned
+                	  alert( textStatus ); // Success
+                	  alert( jqxhr.status ); // 200
+                	  alert( "Load was performed." );
                 	});
             });
             logout();
