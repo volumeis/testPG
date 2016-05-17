@@ -9,7 +9,7 @@ $(function () {
         var pw = $("input:password").val().trim();
         
         if (id == null || id.length < 1) {
-           // bootbox.alert("ID 를 입력하지 않으셨습니다.");
+            alert("ID 를 입력하지 않으셨습니다.");
         	//$("input:tel").focus();
         	console.log($("#customerTel").val().trim());
         	$("a[href='#']").attr("href","#popupDialog");
@@ -17,7 +17,7 @@ $(function () {
         }
 
         if (pw == null || pw.length < 1) {
-        	//bootbox.alert('패스워드를 입력하지 않으셨습니다.');
+        	alert('패스워드를 입력하지 않으셨습니다.');
         	//$("input:password").focus();
         	console.log($("input:password").val().trim());
         	$("a[href='#']").attr("href","#noPopup");
@@ -27,7 +27,6 @@ $(function () {
 
         $.ajax({
             url: COMMONWEBSERVER + "/customer/jsonLogin",
-//            url: "/customer/jsonLogin",
             method: "POST",
             dataType: "json",
             headers: {
@@ -49,6 +48,9 @@ $(function () {
                     //bootbox.alert("아이디 , 패스워드를 확인하시고 다시 로그인...");
                 	$("a[href='#']").attr("href","#retry");
                 }
+            },
+            error: function(JSONData, status){
+            	alert(status);
             }
         });
     });
