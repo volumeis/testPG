@@ -45,7 +45,7 @@
                 $("#login-page").load("login.html [data-role=main]", function (data) {
                     $.mobile.initializePage();
                 });
-                $.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
+                $.fn.getScript("js/pages/login.js", function( data, textStatus, jqxhr ) {
                 	alert( data ); // Data returned
                 	alert( textStatus ); // Success
                 	alert( jqxhr.status ); // 200
